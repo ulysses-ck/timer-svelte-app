@@ -1,5 +1,5 @@
 {
-	"name": "timer-app",
+	"name": "timer-svelte-app",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
