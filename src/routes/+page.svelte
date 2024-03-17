@@ -24,6 +24,8 @@
 	let isFinished = false;
 	let isStarted = false;
 
+	let intervalTimeout: number | null = null;
+
 	function startTimeout() {
 		isStarted = true;
 		const timeTotal = hours * 3600 + minutes * 60 + seconds;
@@ -35,7 +37,7 @@
 		}, timeTotal * 1000);
 
 		// interval
-		const interval = setInterval(() => {
+		intervalTimeout = setInterval(() => {
 			if (seconds > 0) {
 				seconds--;
 			} else if (minutes > 0) {
@@ -46,9 +48,21 @@
 				minutes = 59;
 				seconds = 59;
 			} else {
-				clearInterval(interval);
+				clearInterval(intervalTimeout as number);
 			}
 		}, 1000);
+	}
+
+	function stopTimeout() {
+		clearInterval(intervalTimeout as number);
+	}
+
+	function resetTimeout() {
+		seconds = 0;
+		minutes = 0;
+		hours = 0;
+		isFinished = false;
+		isStarted = false;
 	}
 </script>
 
@@ -81,6 +95,7 @@
 		<input type="number" bind:value={hours} name="hours" id="hours" disabled={isStarted} />
 	</label>
 	<button on:click={startTimeout}>Start Timeout</button>
+<button on:click={stopTimeout}>Stop Timeout</button>
 </section>
 
 <style>
