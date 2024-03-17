@@ -2,7 +2,7 @@
 	import github from '$lib/images/github.svg';
 </script>
 
-<header>
+<header class="flex justify-between items-center">
 	<h1>Timer Svelte Kit</h1>
 	<div>
 		<a href="https://github.com/ulysses-ck/timer-svelte-app" target="_blank">
@@ -12,8 +12,4 @@
 </header>
 
 <style>
-	header {
-		display: flex;
-		justify-content: space-between;
-	}
 </style>

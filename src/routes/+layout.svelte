@@ -10,7 +10,7 @@
 		<slot />
 	</main>
 
-	<footer>
+	<footer class="flex justify-center">
 		<p>
 			Made with ❤️ by <a href="https://svelte.dev">Svelte</a> and
 			<a href="https://kit.svelte.dev">SvelteKit</a>
