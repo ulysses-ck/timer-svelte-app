@@ -95,7 +95,7 @@
 		<input type="number" bind:value={hours} name="hours" id="hours" disabled={isStarted} />
 	</label>
 	<button on:click={startTimeout}>Start Timeout</button>
-<button on:click={stopTimeout}>Stop Timeout</button>
+	<button on:click={stopTimeout}>Stop Timeout</button>
 </section>
 
 <style>
