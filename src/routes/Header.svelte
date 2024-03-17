@@ -5,7 +5,7 @@
 <header>
 	<h1>Timer Svelte Kit</h1>
 	<div>
-		<a href="https://github.com/sveltejs/kit">
+		<a href="https://github.com/ulysses-ck/timer-svelte-app" target="_blank">
 			<img src={github} alt="GitHub" width="50px" height="50px" />
 		</a>
 	</div>
